@@ -40,7 +40,7 @@ To start we will create a Virtual machine using the Microsoft Azure portal. Once
 <br />
 <p>
 </p>
-<p> We will connect to our newly created VM using RDP 
+<p> We will connect to our newly created VM using Remote Desktop Connection 
 </p>
 
 ![step two log into the VM](https://github.com/user-attachments/assets/39f51c65-e902-481d-b13d-c3e6c515025a)
@@ -54,7 +54,7 @@ To start we will create a Virtual machine using the Microsoft Azure portal. Once
 <p>
 </p>
 <p>
-You will have to enable IIS. To do this access the control panel then select uninstall a program. Off to the left select "Turn windows features on or off". A list will appear then you will enable Internet Information Services, then expand it, now expand world wide web services, and finally expand application development features from there we will enable CGI 
+You will have to enable IIS. To do this access the control panel then select uninstall a program. You will then select "Turn windows features on or off". once you do that another window will open up then you will enable Internet Information Services, then expand it, now expand world wide web services, and finally expand application development features from there we will enable CGI 
 </p>  
 
 ![install ISS](https://github.com/user-attachments/assets/e4834740-3ea6-4704-b75b-8266b051d64a)
@@ -66,7 +66,7 @@ You will have to enable IIS. To do this access the control panel then select uni
 
 ## Step 4
 
-Now that we have enabled IIS we need to install PHP Manager, ISS Rewrite module i have included a google doc you can go to and download to get this as well as other files needed to get osTicket up and running that you will see me listing below 
+Now that we have enabled IIS we need to install PHP Manager, and ISS Rewrite module. I have included a google doc where you can download these from as well as other files needed to get osTicket up and running.
 https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD
 
 ![step 3 php manager](https://github.com/user-attachments/assets/dff62467-9571-44f8-8e08-803bfa6974bd)
@@ -77,7 +77,7 @@ https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD
 <p>
 
   ## Step 5
-We are going to creat a file on the C drive and call it PHP. We are then going to extract the PHP zip file into the PHP file we created on the C Drive after doing this your going to instal Microsoft Visual C++
+We are now going to create a file on the C drive and call it PHP. We are then going to extract the PHP zip file into the PHP file we created on the C Drive, after doing this your going to install Microsoft Visual C++
 
 </p>
 
@@ -90,7 +90,7 @@ We are going to creat a file on the C drive and call it PHP. We are then going t
 
 ## Step 6 
 
-Next download MySQL, this is a database that osTicket is going to use to store all our data in. This will hold all our user accounts and all our ticketing information when the download is done and you start setting up MySQL you will select standard configuration from there you will need to create a password aftewords hit next and execute
+Next download MySQL, this is a database that osTicket is going to use to store all our data in. This will hold all our user accounts and all our ticketing information when the download is done. Start setting up MySQL. You will select standard configuration from there you will need to create a password aftewords hit next and execute
 
 ![step 7](https://github.com/user-attachments/assets/be96b4f9-a219-4d13-9c65-e988c3ae43d0)
 ![stpe 7 part 2](https://github.com/user-attachments/assets/f831446a-f385-415d-8334-be33742ed63a)
@@ -105,8 +105,8 @@ Next download MySQL, this is a database that osTicket is going to use to store a
 </p>
 
 ## Step 7
-Now we are going to register PHP from within IIS so what you will do is go to your search bar search ISS 
-and open as an admin, from there you will click PHP manager, Register new PHP version. Then we will upload register the PHP file highlighted in the picture below this will be located in the PHP file we saved to our C drive earlier after this is done we will go back to the main screen and restart the program by clicking stop and then start in the right hand corner 
+Now we are going to register PHP from within IIS. What you will do is go to your search bar search ISS 
+and open as an admin, from there you will click PHP manager, Register new PHP version. Then we will upload register the PHP file highlighted in the picture below. This will be located in the PHP file we saved to our C drive earlier. After this is done we will go back to the main screen and restart the program by clicking stop, and then start in the right hand corner.
 </p>
 
 ![step 8](https://github.com/user-attachments/assets/260e99a4-0982-42a2-954e-78916af3a86a)
@@ -118,8 +118,8 @@ and open as an admin, from there you will click PHP manager, Register new PHP ve
 <p>
 
 ## Step 8
-Now we are finally going to go and unzip our our osTicket installation folder once we do that we will copy the folder titled "upload" from the unzipped file and copy it onto the folder on our C Drive titled "inetroot"
-then we are going to rename upload to "osTicket" 
+Now we are finally going to go and unzip our our osTicket installation folder once we do that we will copy the folder titled "upload" from the unzipped file and copy it onto the folder on our C Drive. 
+Go to your C Drive->inetpub->wwwroot. Now copy your "upload" file into the wwwroot folder. then we are going to rename upload to "osTicket" 
 </p>
 
 ![os ticket](https://github.com/user-attachments/assets/d038b376-7c0a-4c10-b26d-03202dfcdaa4)
@@ -131,10 +131,10 @@ then we are going to rename upload to "osTicket"
 
 ## Step 9 
 
-We are no going to go back into ISS manager as an admin and restart it and attempt to browse to osTicket 
-once restarted you are going to want to expand "sites","default web site" and click osTicket and attempt to browse to the site you can do this by clicking browse on the upper left hand side youll notice some of the extensions are not enabled you will want to enable those so that osTicket will work. In order to do this we will just go back to IIS PHP Manager and make some configurations. In the php manager you will 
+We are no going to go back into ISS manager as an admin and restart it. 
+Once restarted you are going to want to expand "sites" "default web site" and click osTicket and attempt to browse to the site you can do this by clicking browse on the upper left hand side youll notice some of the extensions are not enabled you will want to enable those so that osTicket will work. In order to do this we will just go back to IIS PHP Manager and make some configurations. In the php manager you will 
 "click enable or disable extentions" 
-you are going to want to enable 
+you are going to want to enable these 3 extensions
 
 - php_imap.dll
 - php_intl.dll
@@ -148,7 +148,7 @@ once you have done this refresh your broweser and you should see osTicket has no
 
 ## Step 10
 
-now we will rename a file that osTicket uses to make configurations you are going want to change the name of the file 
+Now we will rename a file that osTicket uses to make configurations, you are going want to change the name of the file 
 
 From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
 To :  C:\inetpub\wwwroot\osTicket\include\ost-config.php
@@ -162,9 +162,9 @@ Assign permissions to ost-config.php Disable inheritance->Removeall New Permissi
 
 ## Step 11 
 
-Afterwards continue setting up osTicket in the browser (click continue) then you will name the Helpdesk and  default email that will receive emails from customers who submit tickets. Before you click "install now"
-we will need to download HeidiSQL from the folder you downloaded onto the PC from the google docs be sure the username and password match your username and password from MySQL once youve done this click open 
-and then you will create a database called "osTicket" Now go back into the browser to set up the final database settings make sure your MySQL Database information matches everthing you just put in HeidiSQL
+Afterwards continue setting up osTicket in the browser (click continue) then you will name the Helpdesk and default email that will receive emails from customers who submit tickets. Before you click "install now"
+we will need to download HeidiSQL from the folder you downloaded onto the PC from the google docs. Be sure the username and password match your username and password from MySQL once youve done this click open 
+and then you will create a database called "osTicket." Now go back into the browser to set up the final database settings, make sure your MySQL Database information matches everthing you just put in HeidiSQL.
 
 </p>
 
